@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sorting Visualizer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Algorithm Playground</p>
+          <h1>Sorting Visualizer</h1>
+        </div>
+        <div class="controls">
+          <label class="field">
+            <span>Algorithm</span>
+            <select id="algorithmSelect">
+              <option value="bubble">Bubble Sort</option>
+              <option value="insertion">Insertion Sort</option>
+              <option value="selection">Selection Sort</option>
+              <option value="heap">Heap Sort</option>
+              <option value="merge">Merge Sort</option>
+              <option value="quick">Quick Sort</option>
+            </select>
+          </label>
+
+          <label class="field range-field">
+            <span>Size</span>
+            <input id="arraySize" type="range" min="10" max="70" step="1" value="30" />
+          </label>
+
+          <label class="field range-field">
+            <span>Speed</span>
+            <input id="speed" type="range" min="1" max="100" step="1" value="40" />
+          </label>
+
+          <div class="button-row">
+            <button id="randomizeBtn" class="secondary">Randomize</button>
+            <button id="sortBtn">Start Sorting</button>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="legend">
+          <div><span class="dot compare"></span> Comparing</div>
+          <div><span class="dot swap"></span> Swapping</div>
+          <div><span class="dot sorted"></span> Sorted</div>
+        </section>
+
+        <div id="chart" class="chart" aria-label="Sorting chart"></div>
+        <p id="status" class="status">Ready to sort.</p>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
